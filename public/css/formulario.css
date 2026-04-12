@@ -1,0 +1,222 @@
+@font-face {
+    font-family: 'Calibri';
+    src: url('/fonts/calibri.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('/fonts/calibrib.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Bahnschrift';
+    src: url('/fonts/bahnschrift.ttf') format('truetype');
+    font-weight: bold;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Calibri', Arial, sans-serif;
+    background: #1f2147;
+    min-height: 100vh;
+}
+
+header {
+    background: #1f2147;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid #625ea6;
+}
+
+.container {
+    max-width: 750px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+h2 {
+    font-family: 'Bahnschrift', 'Arial Narrow', sans-serif;
+    color: #1f2147;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-bottom: 3px solid #3194a3;
+    padding-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-family: 'Calibri', Arial, sans-serif;
+    font-weight: bold;
+    color: #1f2147;
+    font-size: 14px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #625ea6;
+}
+
+.required {
+    color: #e74c3c;
+}
+
+.btn {
+    background: #4d4392;
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #625ea6;
+}
+
+.success {
+    background: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.documento-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.documento-row input[type="text"] {
+    flex: 1;
+}
+
+.digito-guion {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1f2147;
+}
+
+.digito-input {
+    width: 60px !important;
+    text-align: center;
+    background: #f0f0f0;
+    font-weight: bold;
+    color: #1f2147;
+}
+
+.checkbox-label {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-family: 'Calibri', Arial, sans-serif;
+    font-size: 13px;
+    color: #333;
+    font-weight: normal;
+    cursor: pointer;
+    line-height: 1.5;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin-top: 3px;
+    accent-color: #4d4392;
+    flex-shrink: 0;
+}
+
+.row-botones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn-limpiar {
+    background: #3194a3;
+}
+
+.btn-limpiar:hover {
+    background: #2a7d8a;
+}
+
+footer {
+    background: #1f2147;
+    border-top: 3px solid #625ea6;
+    padding: 20px;
+    text-align: center;
+    color: #625ea6;
+    font-size: 14px;
+}
+
+footer img {
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+@media (max-width: 600px) {
+    .row {
+        grid-template-columns: 1fr;
+    }
+    .container {
+        margin: 20px;
+        padding: 25px;
+    }
+    header {
+        padding: 15px 20px;
+    }
+    .row-botones {
+        grid-template-columns: 1fr;
+    }
+}

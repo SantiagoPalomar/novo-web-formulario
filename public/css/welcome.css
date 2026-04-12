@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'Calibri';
+    src: url('/fonts/calibri.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('/fonts/calibrib.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Bahnschrift';
+    src: url('/fonts/bahnschrift.ttf') format('truetype');
+    font-weight: bold;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Calibri', Arial, sans-serif;
+    background: #1f2147;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #1f2147;
+    padding: 20px 40px;
+    border-bottom: 3px solid #625ea6;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 700px;
+    text-align: center;
+}
+
+.empresa-info h2 {
+    font-family: 'Bahnschrift', Arial, sans-serif;
+    color: #ffffff;
+    font-size: 36px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.nit {
+    color: #3194a3;
+    font-size: 18px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.descripcion {
+    background: rgba(255,255,255,0.05);
+    border-left: 4px solid #3194a3;
+    padding: 25px 30px;
+    margin-bottom: 50px;
+    border-radius: 0 8px 8px 0;
+}
+
+.descripcion p {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.btn {
+    display: inline-block;
+    background: #4d4392;
+    color: white;
+    padding: 16px 40px;
+    border-radius: 6px;
+    font-family: 'Bahnschrift', Arial, sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #625ea6;
+}
+
+footer {
+    background: #1f2147;
+    border-top: 3px solid #625ea6;
+    padding: 20px;
+    text-align: center;
+    color: #625ea6;
+    font-size: 14px;
+}
+
+footer img {
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+@media (max-width: 600px) {
+    .empresa-info h2 {
+        font-size: 24px;
+    }
+    .descripcion p {
+        font-size: 16px;
+    }
+    header {
+        padding: 15px 20px;
+    }
+}
