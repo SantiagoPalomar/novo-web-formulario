@@ -29,9 +29,9 @@ function calcularDigito() {
     const container = document.getElementById('digito_container');
     const digitoInput = document.getElementById('digito_verificacion');
 
-    if ((tipo === 'NIT' || tipo === 'NIC') && nit.length > 0) {
+    if (tipo !== '' && nit.length > 0) {
         container.classList.remove('hidden');
-        const factores = [3, 7, 13, 17, 19, 23, 29, 37, 41];
+        const factores = [3, 7, 13, 17, 19, 23, 29, 37, 41, 43, 47, 53, 59, 67, 71];
         let suma = 0;
         const nitReversado = nit.split('').reverse();
         for (let i = 0; i < nitReversado.length && i < factores.length; i++) {

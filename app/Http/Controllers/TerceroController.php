@@ -33,12 +33,12 @@ class TerceroController extends Controller
             'email.unique' => 'Este correo electronico ya se encuentra registrado.',
             'acepto_politicas.accepted' => 'Debe aceptar el tratamiento de datos personales.',
         ];
+        
+        $request->merge([
+            'documento' => preg_replace('/[^0-9]/', '', $request->documento)
+        ]);
 
         $request->validate($rules, $messages);
-
-        if ($request->tipo_documento !== 'NIT' && $request->tipo_documento !== 'NIC') {
-    $request->merge(['digito_verificacion' => '0']);
-}
 
         try {
             Tercero::create($request->except('acepto_politicas'));
