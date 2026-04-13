@@ -19,6 +19,10 @@
             <div class="success">{{ session('success') }}</div>
         @endif
 
+        @if(session('error'))
+            <div class="error-box">{{ session('error') }}</div>
+        @endif
+
         <form method="POST" action="/formulario">
             @csrf
 
@@ -95,11 +99,11 @@
             <div class="row">
                 <div class="form-group">
                     <label>Telefono Principal</label>
-                    <input type="text" name="telefono_uno" placeholder="Ej: 3001234567" value="{{ old('telefono_uno') }}">
+                    <input type="tel" name="telefono_uno" placeholder="Ej: 3001234567" value="{{ old('telefono_uno') }}">
                 </div>
                 <div class="form-group">
                     <label>Telefono Secundario</label>
-                    <input type="text" name="telefono_dos" value="{{ old('telefono_dos') }}">
+                    <input type="tel" name="telefono_dos" placeholder="Ej: 3001234567" value="{{ old('telefono_dos') }}">
                 </div>
             </div>
 
@@ -134,8 +138,10 @@
     </div>
 
     <footer>
-        <img src="{{ asset('images/Logo NOVO.png') }}" alt="Inversiones Novo SAS" height="40">
-        <p>&copy; {{ date('Y') }} Inversiones Novo SAS</p>
+        <div>
+            <img src="{{ asset('images/Logo NOVO.png') }}" alt="Inversiones Novo SAS" height="40">
+            <p>&copy; {{ date('Y') }} Inversiones Novo SAS</p>
+        </div>
     </footer>
 
     <script src="{{ asset('js/formulario.js') }}"></script>

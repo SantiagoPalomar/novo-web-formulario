@@ -14,7 +14,8 @@ class TerceroController extends Controller
             'tipo_documento' => 'required',
             'documento' => 'required|unique:terceros,documento',
             'primer_nombre' => 'required',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:terceros,email',
+            'acepto_politicas' => 'accepted',
         ];
 
         if ($request->tipo_documento !== 'NIT' && $request->tipo_documento !== 'NIC') {
@@ -29,6 +30,8 @@ class TerceroController extends Controller
             'primer_apellido.required' => 'El primer apellido es obligatorio.',
             'email.required' => 'El correo electronico es obligatorio.',
             'email.email' => 'El correo electronico no es valido.',
+            'email.unique' => 'Este correo electronico ya se encuentra registrado.',
+            'acepto_politicas.accepted' => 'Debe aceptar el tratamiento de datos personales.',
         ];
 
         $request->validate($rules, $messages);
@@ -37,7 +40,11 @@ class TerceroController extends Controller
     $request->merge(['digito_verificacion' => '0']);
 }
 
-        Tercero::create($request->except('acepto_politicas'));
+        try {
+            Tercero::create($request->except('acepto_politicas'));
+        } catch (\Exception $e) {
+            return back()->with('error', 'Ocurrio un error al guardar los datos. Intente de nuevo.')->withInput();
+        }
 
         return back()->with('success', 'Registro exitoso');
     }

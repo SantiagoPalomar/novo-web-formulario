@@ -117,6 +117,15 @@ input:focus, select:focus {
     text-align: center;
 }
 
+.error-box {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 .error {
     color: #e74c3c;
     font-size: 13px;

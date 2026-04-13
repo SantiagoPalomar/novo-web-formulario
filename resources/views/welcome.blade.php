@@ -28,10 +28,10 @@
     </main>
 
     <footer>
-        <p>
+        <div>
             <img src="{{ asset('images/Logo NOVO.png') }}" alt="Inversiones Novo SAS" height="50">
             <p>&copy; {{ date('Y') }} Inversiones Novo SAS</p>
-        </p>
+        </div>
     </footer>
 
 </body>

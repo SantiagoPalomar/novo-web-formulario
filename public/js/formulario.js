@@ -48,3 +48,12 @@ function calcularDigito() {
         digitoInput.value = '';
     }
 }
+
+function limpiarFormulario() {
+    document.getElementById('tipo_documento').value = '';
+    document.getElementById('campos_persona').classList.remove('hidden');
+    document.getElementById('campos_nit').classList.add('hidden');
+    document.getElementById('digito_container').classList.add('hidden');
+    document.getElementById('primer_nombre').disabled = false;
+    document.getElementById('primer_apellido').disabled = false;
+}
