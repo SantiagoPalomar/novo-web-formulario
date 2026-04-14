@@ -70,12 +70,16 @@ novo-web-formulario/
 │       └── create_terceros_table.php
 ├── public/
 │   ├── css/
+│   │   ├── formulario.css
+│   │   ├── welcome.css
+│   │   └── inversiones.css
 │   ├── js/
 │   ├── fonts/
 │   └── images/
 ├── resources/
 │   └── views/
 │       ├── welcome.blade.php
+│       ├── novo-parking.blade.php
 │       └── formulario.blade.php
 └── routes/
     └── web.php

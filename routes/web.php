@@ -5,5 +5,10 @@ use App\Http\Controllers\TerceroController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/formulario', [TerceroController::class, 'mostrar']);
-Route::post('/formulario', [TerceroController::class, 'guardar']);
+
+Route::get('/novo-parking', function () {
+    return view('novo-parking');
+});
+
+Route::get('/novo-parking/formulario', [TerceroController::class, 'mostrar']);
+Route::post('/novo-parking/formulario', [TerceroController::class, 'guardar']);

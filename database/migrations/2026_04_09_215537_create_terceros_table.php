@@ -23,7 +23,7 @@ public function up(): void
         $table->string('direccion')->nullable();
         $table->string('telefono_uno')->nullable();
         $table->string('telefono_dos')->nullable();
-        $table->string('email');
+        $table->string('email')->unique();
         $table->string('departamento')->nullable();
         $table->string('ciudad')->nullable();
         $table->boolean('activo')->default(true);

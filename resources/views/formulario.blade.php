@@ -23,7 +23,7 @@
             <div class="error-box">{{ session('error') }}</div>
         @endif
 
-        <form method="POST" action="/formulario">
+        <form method="POST" action="/novo-parking/formulario">
             @csrf
 
             <div class="form-group">
