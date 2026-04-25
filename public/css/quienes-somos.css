@@ -1,0 +1,219 @@
+/* ── BREADCRUMB ── */
+.breadcrumb {
+  padding: 12px 40px;
+  font-size: 13px;
+  color: #6b7a8d;
+  background: #eaf6f7;
+  border-bottom: 1px solid #d0edf0;
+}
+.breadcrumb a {
+  color: #6b7a8d;
+  text-decoration: none;
+}
+.breadcrumb a:hover { color: #00a5b0; }
+.breadcrumb .current {
+  color: #00a5b0;
+  font-weight: 600;
+}
+
+/* ── HERO ── */
+.qs-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  min-height: 360px;
+}
+.qs-hero-content {
+  padding: 40px 50px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+.qs-hero-content h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #002046;
+  line-height: 1.1;
+}
+.qs-hero-img-wrapper {
+  flex-shrink: 0;
+  height: 360px;
+  display: flex;
+}
+.qs-hero-img {
+  height: 360px;
+  width: auto;
+  display: block;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 18%);
+  mask-image: linear-gradient(to right, transparent 0%, black 18%);
+}
+
+/* ── ABOUT TEXT SECTION ── */
+.qs-about {
+  background: #fff;
+  padding: 60px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+}
+.qs-about-text {
+  max-width: 620px;
+  text-align: center;
+}
+.qs-about-text h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1a2b3c;
+  margin-bottom: 18px;
+  position: relative;
+  padding-bottom: 12px;
+}
+.qs-about-text h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px; height: 3px;
+  background: #00a5b0;
+  border-radius: 2px;
+}
+.qs-about-text p {
+  font-size: 14.5px;
+  color: #4a5a6a;
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+.qs-about-text p:last-child { margin-bottom: 0; }
+.qs-about-text strong { color: #1a2b3c; }
+
+/* ── VALORES ── */
+.qs-valores {
+  background: #f5f6f8;
+  padding: 64px 40px 72px;
+  text-align: center;
+}
+.qs-valores h2 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #1a2b3c;
+  margin-bottom: 48px;
+}
+.valores-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.valor-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 32px 20px 28px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.06);
+  transition: box-shadow .2s, transform .2s;
+}
+.valor-card:hover {
+  box-shadow: 0 6px 22px rgba(0,165,176,.15);
+  transform: translateY(-3px);
+}
+.valor-icon {
+  width: 56px;
+  height: 56px;
+  background: #eaf6f7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00a5b0;
+  font-size: 24px;
+}
+.valor-card span {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #1a2b3c;
+}
+
+/* ── MISIÓN Y VISIÓN ── */
+.qs-mision {
+  background: #fff;
+  padding: 72px 40px 80px;
+  position: relative;
+}
+.mv-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  align-items: stretch;
+  max-width: 860px;
+  margin: 0 auto;
+  gap: 0;
+}
+.mv-card {
+  background: #f5f6f8;
+  border-radius: 18px;
+  padding: 44px 36px 40px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,.06);
+  align-self: stretch;
+}
+.mv-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  background: #eaf6f7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00a5b0;
+}
+.mv-card h3 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #00a5b0;
+  margin-bottom: 18px;
+}
+.mv-card p {
+  font-size: 13.5px;
+  color: #4a5a6a;
+  line-height: 1.8;
+}
+
+/* rombo central */
+.mv-diamond {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  align-self: center;
+}
+.mv-diamond-inner {
+  width: 44px;
+  height: 44px;
+  background: #d4eef1;
+  transform: rotate(45deg);
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .breadcrumb { padding: 10px 20px; }
+  .qs-hero-content { padding: 0 24px; }
+  .qs-hero-content h1 { font-size: 32px; }
+  .qs-about { padding: 40px 24px; }
+  .qs-valores { padding: 48px 20px; }
+  .mv-wrapper {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .mv-diamond { display: none; }
+}

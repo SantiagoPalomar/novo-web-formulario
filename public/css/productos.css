@@ -1,0 +1,123 @@
+/* ── BREADCRUMB ── */
+.breadcrumb {
+  padding: 12px 40px;
+  font-size: 13px;
+  color: #6b7a8d;
+  background: #eaf6f7;
+  border-bottom: 1px solid #d0edf0;
+}
+.breadcrumb a {
+  color: #6b7a8d;
+  text-decoration: none;
+}
+.breadcrumb a:hover { color: #00a5b0; }
+.breadcrumb .current {
+  color: #00a5b0;
+  font-weight: 600;
+}
+
+/* ── PAGE HEADER ── */
+.page-header {
+  padding: 44px 40px 36px;
+  background: #fff;
+}
+.page-header h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #1a2b3c;
+  margin-bottom: 10px;
+}
+.page-header p {
+  font-size: 14px;
+  color: #5a6a7a;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* ── DIVIDER ── */
+.divider {
+  height: 6px;
+  background: linear-gradient(90deg, #00a5b0 0%, #66c8cf 60%, #f5f6f8 100%);
+}
+
+/* ── PRODUCTS SECTION ── */
+.section-products-page {
+  padding: 48px 40px 70px;
+  background: #f5f6f8;
+}
+
+.products-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.products-page-header h2 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1a2b3c;
+}
+.products-count {
+  font-size: 13px;
+  color: #6b7a8d;
+  font-weight: 500;
+}
+
+/* ── GALLERY GRID ── */
+.products-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+.product-tile {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,.06);
+  transition: box-shadow .25s, transform .25s;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+.product-tile:hover {
+  box-shadow: 0 8px 28px rgba(0,165,176,.18);
+  transform: translateY(-4px);
+}
+
+.product-tile-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: #eef0f3;
+  display: block;
+}
+
+.product-tile-body {
+  padding: 16px 18px 20px;
+  border-top: 2px solid #f0f1f3;
+}
+.product-tile-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a2b3c;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .breadcrumb { padding: 10px 20px; }
+  .page-header { padding: 30px 20px 24px; }
+  .section-products-page { padding: 32px 20px 50px; }
+  .products-gallery { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+}
+@media (max-width: 480px) {
+  .products-gallery { grid-template-columns: 1fr; }
+  .page-header h1 { font-size: 24px; }
+}

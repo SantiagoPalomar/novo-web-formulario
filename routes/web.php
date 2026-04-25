@@ -6,9 +6,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/novo-parking', function () {
-    return view('novo-parking');
+Route::get('/productos', function () {
+    return view('productos');
 });
 
-Route::get('/novo-parking/formulario', [TerceroController::class, 'mostrar']);
-Route::post('/novo-parking/formulario', [TerceroController::class, 'guardar']);
+Route::get('/quienes-somos', function () {
+    return view('quienes-somos');
+});
+
+Route::get('/formulario', [TerceroController::class, 'mostrar']);
+Route::post('/formulario', [TerceroController::class, 'guardar']);
